@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MenteSaudável - Conscientização sobre Saúde Mental para Jovens</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navegação -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">MenteSaudável</div>
+            <ul class="nav-links">
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#topicos">Tópicos</a></li>
+                <li><a href="#recursos">Recursos</a></li>
+                <li><a href="#ajuda">Ajuda</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1>Sua Saúde Mental é Importante</h1>
+            <p>Um espaço seguro para entender e cuidar da sua saúde mental</p>
+            <button class="cta-button" onclick="scrollToSection('topicos')">Comece Agora</button>
+        </div>
+    </section>
+
+    <!-- Seção de Tópicos Principais -->
+    <section id="topicos" class="topics">
+        <div class="container">
+            <h2>Tópicos Importantes</h2>
+            <div class="topics-grid">
+                <div class="topic-card">
+                    <div class="topic-icon">😰</div>
+                    <h3>Ansiedade</h3>
+                    <p>Entenda o que é ansiedade, seus sintomas e estratégias para lidar com ela.</p>
+                    <a href="topics/ansiedade.html" class="read-more">Saiba Mais →</a>
+                </div>
+                <div class="topic-card">
+                    <div class="topic-icon">😔</div>
+                    <h3>Depressão</h3>
+                    <p>Informações sobre depressão, sinais de alerta e quando procurar ajuda.</p>
+                    <a href="topics/depressao.html" class="read-more">Saiba Mais →</a>
+                </div>
+                <div class="topic-card">
+                    <div class="topic-icon">😤</div>
+                    <h3>Estresse</h3>
+                    <p>Técnicas para gerenciar o estresse do dia a dia e melhorar seu bem-estar.</p>
+                    <a href="topics/estresse.html" class="read-more">Saiba Mais →</a>
+                </div>
+                <div class="topic-card">
+                    <div class="topic-icon">💤</div>
+                    <h3>Sono</h3>
+                    <p>A importância do sono e dicas para melhorar a qualidade do seu descanso.</p>
+                    <a href="topics/sono.html" class="read-more">Saiba Mais →</a>
+                </div>
+                <div class="topic-card">
+                    <div class="topic-icon">🤝</div>
+                    <h3>Relacionamentos</h3>
+                    <p>Guia sobre relacionamentos saudáveis e comunicação efetiva com os outros.</p>
+                    <a href="topics/relacionamentos.html" class="read-more">Saiba Mais →</a>
+                </div>
+                <div class="topic-card">
+                    <div class="topic-icon">🧠</div>
+                    <h3>Autoestima</h3>
+                    <p>Desenvolva uma relação saudável com você mesmo e fortaleça sua autoestima.</p>
+                    <a href="topics/autoestima.html" class="read-more">Saiba Mais →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Recursos -->
+    <section id="recursos" class="recursos">
+        <div class="container">
+            <h2>Recursos Úteis</h2>
+            <div class="recursos-grid">
+                <div class="recurso-item">
+                    <h3>📝 Teste de Autoavaliação</h3>
+                    <p>Responda um questionário rápido para avaliar seu bem-estar mental.</p>
+                    <button class="btn-secondary" onclick="openModal('teste-modal')">Fazer Teste</button>
+                </div>
+                <div class="recurso-item">
+                    <h3>🎯 Exercícios de Relaxamento</h3>
+                    <p>Técnicas de respiração e meditação para acalmar a mente.</p>
+                    <button class="btn-secondary" onclick="window.location.href='recursos/exercicios.html'">Ver Exercícios</button>
+                </div>
+                <div class="recurso-item">
+                    <h3>📚 Biblioteca de Artigos</h3>
+                    <p>Artigos educativos sobre saúde mental e bem-estar.</p>
+                    <button class="btn-secondary" onclick="window.location.href='recursos/artigos.html'">Ler Artigos</button>
+                </div>
+                <div class="recurso-item">
+                    <h3>☎️ Linhas de Ajuda</h3>
+                    <p>Contatos de profissionais e linhas de prevenção do suicídio.</p>
+                    <button class="btn-secondary" onclick="window.location.href='recursos/ajuda.html'">Ver Contatos</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Ajuda Rápida -->
+    <section id="ajuda" class="ajuda-rapida">
+        <div class="container">
+            <h2>Precisa de Ajuda Agora?</h2>
+            <div class="ajuda-content">
+                <p>Se você está passando por um momento difícil ou tendo pensamentos de autolesão, não está sozinho.</p>
+                <div class="help-buttons">
+                    <button class="emergency-button" onclick="window.location.href='tel:188'">☎️ Disque 188<br><small>CVV - Prevenção do Suicídio</small></button>
+                    <button class="emergency-button" onclick="window.location.href='tel:192'">🚨 192<br><small>Emergência Médica</small></button>
+                    <button class="emergency-button" onclick="openModal('chat-modal')">💬 Chat de Apoio<br><small>Conversa com voluntários</small></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Contato -->
+    <section id="contato" class="contato">
+        <div class="container">
+            <h2>Entre em Contato</h2>
+            <form class="contact-form" onsubmit="handleContactForm(event)">
+                <div class="form-group">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn-primary">Enviar Mensagem</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 MenteSaudável. Todos os direitos reservados.</p>
+            <p>Este site é informativo e não substitui consulta profissional.</p>
+            <div class="footer-links">
+                <a href="#">Privacidade</a> | 
+                <a href="#">Termos de Uso</a> | 
+                <a href="#">Créditos</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
